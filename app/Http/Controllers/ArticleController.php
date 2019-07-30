@@ -21,5 +21,11 @@ class ArticleController extends Controller
      {
         return Article::find($id);
      }
+    public function update(Request $request, $id)
+     {
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
 
+        return $article;
+     }
 }
