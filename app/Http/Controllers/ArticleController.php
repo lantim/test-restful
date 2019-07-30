@@ -28,4 +28,12 @@ class ArticleController extends Controller
 
         return $article;
      }
+
+    public function delete(Request $request, $id)
+     {
+        $article = Article::findOrFail($id);
+        $article->delete();
+
+        return 204;
+     }
 }

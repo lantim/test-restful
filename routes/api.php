@@ -20,3 +20,4 @@ Route::post('articles', 'ArticleController@store');//them
 Route::get('articles', 'ArticleController@index'); //lay all
 Route::get('articles/{id}', 'ArticleController@show'); // lay mot
 Route::put('articles/{id}', 'ArticleController@update');//sua
+Route::delete('articles/{id}', 'ArticleController@delete');//xoa
