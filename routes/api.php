@@ -17,3 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('articles', 'ArticleController@store');//them
+Route::get('articles', 'ArticleController@index'); //lay all
+Route::get('articles/{id}', 'ArticleController@show'); // lay mot

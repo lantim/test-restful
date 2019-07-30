@@ -11,4 +11,15 @@ class ArticleController extends Controller
      {
         return Article::create($request->all());
      }
+
+    public function index()
+     {
+        return Article::all();
+     }
+ 
+    public function show($id)
+     {
+        return Article::find($id);
+     }
+
 }
